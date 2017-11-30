@@ -1,107 +1,348 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>网站一级标题</title>
-</head>
-<body>
-	
-	
-	<!-- 注释区域-->
-	<h1>网站一级标题</h1>
-	<a href="#first">点击第一节标题</a><br/>
-	<a href="#second">点击第二节标题</a><br/>
-	<a href="#third">点击第三节标题</a><br/>
-	<a href="#four">点击第四节标题</a><br/>
-	<p1 id="first">匆匆</p1><br/>
-	<p2>第一段</p2><br/>
-	<p3>朱自清</p3><br/>
-	<p4>
-		燕子去了，有再来的时候；杨柳枯了，有再青的时候；桃花谢了，有再开的时候。但是，聪明的，你告诉我，我们的日子为什么一去不复返呢？ ——是有人偷了他们罢：那是谁？又藏在何处呢？是他们自己逃走了：现在又到了哪里呢？<a href="https://zhidao.baidu.com/question/78196678.html" target="_blank">更多精彩点击这里</a>
-	</p4><br/>
-	<p1 id="second">背影</p1><br/>
-	<p2>第二段</p2><br/>
-	<p3>朱自清</p3><br/>
-	<p4>
-		我与父亲不相见已二年余了，我最不能忘记的是他的背影。 
-
-那年冬天，祖母死了，父亲的差使也交卸了，正是祸不单行的日子。我从北京到徐州，打算跟着父亲奔丧回家。到徐州见着父亲，看见满院狼籍的东西，又想起祖母，不禁簌簌地流下眼泪。父亲说：“事已如此，不必难过，好在天无绝人之路！” 
-<a href="https://www.douban.com/group/topic/7023014/">更多精彩</a>
-	</p4><br/>
-	<p>图片列表</p>
-	<ul type=disc>
-		<li>图片列表1</li>
-		<li>图片列表2</li>
-		<li>图片列表3</li>
-		<li>图片列表4</li>
-	</ul> 
-	<p>图片示例</p>
-	<p>第一张图片</p>
-	<img src="咕噜.jpg" width="100" height="50" />
-	<p>第二张图片</p><br/>
-	<img src="龙猫.jpg" height="50" width="100" />
-<h1 id="third">最后一篇文章一级标题</h1>
-<h2>文章二级标题</h2>
-<p>editor</p>
-<ul type=disc>
-	<li>first</li>
-	<li>second</li>
-	<li>third</li>
-</ul>
-<p>下面是一个表格</p>
-<div>
-	<table border="5" bordercolor='red'>
-	<thead >
-		<tr>
-			<td>表头</td>
-			<td>表头</td>
-			<td>表头</td>
-		</tr>
+	<style type="text/css">
+		*{
+			margin: 0px;
+		}
+		body{
+			background-color: aliceblue;
+			min-width:770px;
+		}
 		
-	</thead>
-	<tbody>
-		<tr>
-			<td>表内容</td>
-			<td>表内容</td>
-			<td>表内容</td>
-		</tr>
-		<tr>
-			<td>表内容2</td>
-			<td>表内容2</td>
-			<td>表内容2</td>
-		</tr>
+		header{
+			height: 80px;
+			width: 100%;
+			background-color:#999999;
+		}
 
-	</tbody>
-</table>
-</div>
+		header .title{
+			margin-left: 20px;
+			height: 50px;
+			font-size: 20px;
+			margin-right: 20px;
+			color:white;
+			position: absolute;
+		}
 
-<p>这是最后一个侧边栏</p>
-<p>侧栏注册窗口</p>
-<p>
-	<label>在此输入注册信息:</label>
-	<input type="text" name="输入">
-</p>
-<p>
-	<label>邮箱和地址的格式：</label><br/>
-	<label>请输入密码：</label>
-	<input type="text" name="password">
-	<label>请重复输入密码：</label>
-	<input type="text" name="password"><br/>
-	<label>密码为6-16英文数字</label>
-</p>
-<p>
-	<form action="" method="get">
-		性别：
-		<label><input type="radio" name="sex"/>女</label>
-		<label><input type="radio" name="sex"/>男</label>
-		<label><input type="checkbox" name="work"/>运动</label>
-		<label><input type="checkbox" name="work"/>艺术</label>
-		<label><input type="checkbox" name="work"/>科学的个人描述:</label><textarea>这是一个多行输入框，输入您的个人描述</textarea>
+		form{
+			display: block;
+			font-size: 12px;
+			padding: 20px;
+		}
+		.navl{
+			float: right;
+			font-size: 12px;
+			line-height: 60px;
+			margin-right: 20px;
+		}
+
+		.nav a{
+			color:#FFFFFF;
+			text-decoration: none;
+		}
+		.listPhoto{	
+			overflow: auto;
+			float: left;
+		}
+		.firstArticle{
+			float: left;
+
+		}
+		.secondArticle{
+			float: left;
+		}
+		.listTable{
+			float: left;
+		}
+		
+		.secondArticle_article,
+		.fisrtarticle_article{
+			text-indent: 2em;
+		}
+		.firstArticle,
+		.secondArticle,
+		.listPhoto,
+		.listTable,
+		aside{
+			width:70%;
+			background-color: #FFFFFF;
+			margin: 5px;
+			padding: 22px;
+			box-shadow: 2px 2px 1px 1px #cccccc;
+		}
+		
+		.firstArticle
+		.secondArticle
+		.listPhoto,
+		.listTable{
+			margin-top: 50px;
+			margin:22px 390px 22px 5px;
+		}
+
+		aside{
+			float: right;
+			width: 20%;
+		}
+
+		.atitle{
+			padding: 20px;
+		}
+		.author{
+			color:gray;
+			font-size: 0.8em;
+			line-height: 2em;
+		}
+		.Image{
+			float: left;
+			border: 1px solid #cccccc;
+			width: 130px;
+			height: 130px;
+			padding: 5px;
+			font-size: 12px;
+
+		}
+		.Image p{
+			margin-bottom: 5px;
+		}
+		.Image img{
+			width: 120px;
+			height: 100px;
+		}
+		.City
+		{
+			margin-bottom: 10px;
+		}
+		.Detial{
+			margin-bottom: 10px;
+		}
+		.Sex{
+			margin-bottom: 10px;
+		}
+		.Like{
+			margin-bottom: 10px;
+		}
+
+		.error{
+			color:#A9A9A9;
+			margin-top: 5px;
+		}
+		#Sub{
+			width:100%;
+			height: 40px;
+			background-color: blue;
+			border: none;
+			border-radius: 10px;
+			color:#FFFFFF;
+			font-size: 15px;
+			font-weight: bold;
+		}
+		
+
+		.listTable table{
+			width: 100%;
+		}
+
+		/*.listTable td{
+			background-color: #000000;
+			color: #FFFFFF;
+		}*/
+		
+		.footer{
+			width: 100%;
+			height: 80px;
+			text-align: center;
+			bottom: 0px;
+			line-height: 40px;
+			overflow: hidden;
+			margin-top: 10px;
+		}
+	</style>
+</head>
+
+<body>
+<header>
+	<h1 class="title" style="top: 20px;">百度前端学院任务(五)</h1>
+	<nav class="navl">
+		<a href="#">第一篇文章</a>
+		<a href="#">第二篇文章</a>
+		<a href="#">第三篇文章</a>
+	</nav>
+</header> 
+
+<aside>
+	<h3 class="atitle">侧栏注册窗口</h3>
+	<form action="" method="post">
+		<p class="Emil"><label>请输入邮箱地址:</label>
+			<input type="text" name="" id="emil" value="这是一个输入框"/></p><br/>
+		<p class="error">邮箱格式请按要求填写</p><br/>
+	
+		<p class="password">
+			<label for="mima">请输入密码：</label>
+			<input type="text" name="" id="mima" value="这是一个输入框"/></p>
+		<p class="passwordAgain">
+			<label for="mimaagain">请重复输入密码：</label>
+			<input type="text" name="" id="mimaagain" value="这是一个输入框"/></p>
+		<p class="error">密码为6-16位英文数字</p><br/>
+		
+		<p class="Sex">性别：
+
+			<input type="radio" name="sex" id="man" value=""/>
+			<label for="man">男</label>
+			<input type="radio" name="sex" id="woman" value="" checked="checked" />
+			<label for="woman">女</label>
+		</p>
+
+		<p class="City">城市：
+			<select>
+				<option value=" 北京">北京</option>
+				<option value="武汉">武汉</option>
+				<option value="上海">上海</option>
+			</select>
+		</p>
+
+		<p class="Like">爱好：
+			<input type="checkbox" name="like" id="run" value="run"/>
+			<label for="run">运动</label>
+			<input type="checkbox" name="like" id="run" value="art"/>
+			<label for="art">艺术</label>
+			<input type="checkbox" name="like" id="run" value="work"/>
+			<label for="work">科学</label>
+		</p>
+		
+		<p class="Detial">个人描述:
+			<textarea class="te">这是一个多行输入框，输入您的个人描述</textarea>
+		</p>
 	</form>
+	<input type="submit" name="" id="Sub" value="确认提交"/> 
+</aside>
 
-</p>
-<p>版权所有@</p>
-	<!--font face='宋体' color="blue">文字颜色</font-->
+<article class="firstArticle"> 
+	<h2 align="left">文章一级标题</h2>
+	<h3 align="left">文章二级标题</h3>
+	<p class="author">文章作者: 朱自清</p>
+	<span id="first">匆匆</span><br/>
+	<span>第一段</span><br/>
+	<p class="fisrtarticle_article">
+		燕子去了，有再来的时候；杨柳枯了，有再青的时候；桃花谢了，有再开的时候。但是，聪明的，你告诉我，我们的日子为什么一去不复返呢？ ——是有人偷了他们罢：那是谁？又藏在何处呢？是他们自己逃走了：现在又到了哪里呢？
+		<a href="https://zhidao.baidu.com/question/78196678.html" target="_blank">更多精彩点击这里</a>
+	</p><br/>
+	<img src="匆匆.jpeg"/><br/>
+	<p class="fisrtarticle_article">
+		我不知道他们给了我多少日子；但我的手确乎是渐渐空虚了。在默默里算着，八千多日子已经从我手中溜去；像针尖上一滴水滴在大海里，我的日子滴在时间的流里，没有声音，也没有影子。我不禁头涔涔而泪潸潸了。
+		<a href="https://zhidao.baidu.com/question/78196678.html" target="_blank">更多精彩点</a>
+	</p>
+</article>
 
+<article class="secondArticle">
+	<h2>文章一级标题</h2>
+	<h3>文章二级标题</h3>
+	<p class="author">文章作者朱自清，发表时间</p>
+	<span>背影</span><br/>
+	<p class="secondArticle_article">
+		我与父亲不相见已二年余了，我最不能忘记的是他的背影。 
+		那年冬天，祖母死了，父亲的差使也交卸了，正是祸不单行的日子。我从北京到徐州，打算跟着父亲奔丧回家。到徐州见着父亲，看见满院狼籍的东西，又想起祖母，不禁簌簌地流下眼泪。父亲说：“事已如此，不必难过，好在天无绝人之路！” 
+		<a href="https://www.douban.com/group/topic/7023014/">更多精彩</a>
+	</p><br/>
+	<img src="背影.jpg"/><br/>
+	<p class="secondArticle_article">
+		到南京时，有朋友约去游逛，勾留了一日；第二日上午便须渡江到浦口，下午上车北去。父亲因为事忙，本已说定不送我，叫旅馆里一个熟识的茶房陪我同去。他再三嘱咐茶房，甚是仔细。但他终于不放心，怕茶房不妥帖；颇踌躇了一会。其实我那年已二十岁，北京已来往过两三次，是没有甚么要紧的了。他踌躇了一会，终于决定还是自己送我去。我两三回劝他不必去；他只说，“不要紧，他们去不好！”
+		<a href="http://www.ccview.net/htm/xiandai/zzq/zzqsw003.htm">更多精彩</a>
+	</p>
+	<span>项目列表</span>
+	<ul type=disc>
+		<li>项目列表1</li>
+		<li>项目列表2</li>
+		<li>项目列表3</li>
+		<li>项目列表4</li>
+	</ul> 
+</article>
 
+<article class="listPhoto">
+	<h2>图片示例</h2>
+	<div class="Image">
+		<p>好看的图片</p><br/>
+		<img src="咕噜.jpg" width="200" height="100" />
+	</div>
+	<div class="Image">
+		<p>好看的图片</p><br/>
+		<img src="龙猫.jpg" height="100" width="200" />
+	</div>
+	<div class="Image">
+		<p>好看的图片</p><br/>
+		<img src="咕噜.jpg" width="200" height="100" />
+	</div>
+	<div class="Image">
+		<p>好看的图片</p><br/>
+		<img src="咕噜.jpg" width="200" height="100" />
+	</div>
+	<div class="Image">
+		<p>好看的图片</p><br/>
+		<img src="咕噜.jpg" width="200" height="100" />
+	</div>
+	<div class="Image">
+		<p>好看的图片</p><br/>
+		<img src="咕噜.jpg" width="200" height="100" />
+	</div>
+	<div class="Image">
+		<p>好看的图片</p><br/>
+		<img src="咕噜.jpg" width="200" height="100" />
+	</div>
+	<div class="Image">
+		<p>好看的图片</p><br/>
+		<img src="咕噜.jpg" width="200" height="100" />
+	</div>
+	<div class="Image">
+		<p>好看的图片</p><br/>
+		<img src="咕噜.jpg" width="200" height="100" />
+	</div>
+	<div class="Image">
+		<p>好看的图片</p><br/>
+		<img src="咕噜.jpg" width="200" height="100" />
+	</div>
+</article>
+
+<article class="listTable">
+	<h2 id="third">最后一篇文章一级标题</h2>
+	<h3>文章二级标题</h3>
+	<p class="author">文章作者</p>
+	<ol class="list">
+		<li>first</li>
+		<li>second</li>
+		<li>third</li>
+	</ul>
+	<span>下面是一个表格</span>
+	<div>
+		<table border="1">
+			<thead >
+				<tr>
+					<td>表头</td>
+					<td>表头</td>
+					<td><a href="#">操作</a></td>
+				</tr>	
+			</thead>
+			<tbody>
+				<tr>
+					<td>表内容</td>
+					<td>表内容</td>
+					<td><a href="#">操作</a></td>
+				</tr>
+				<tr>
+					<td>表内容2</td>
+					<td>表内容2</td>
+					<td><a href="#">操作</a></td>
+				</tr>
+				<tr>
+					<td>总计</td>
+					<td>10000</td>
+					<td>2000</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</article>
+
+<div class="footer">
+<p>版权所有@</p> </div>
 </body>
 </html>
